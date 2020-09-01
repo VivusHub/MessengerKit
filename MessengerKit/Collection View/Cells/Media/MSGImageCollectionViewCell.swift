@@ -40,7 +40,6 @@ class MSGImageCollectionViewCell: MSGMessageCell {
                         DispatchQueue.main.async {
                            let gifImage = FLAnimatedImage(gifData: _data)
                             strongSelf.imageView.animatedImage = gifImage
-                                       strongSelf.urlGif = urlString
                             strongSelf.activityIndic.stopAnimating()
                         }
                     }
