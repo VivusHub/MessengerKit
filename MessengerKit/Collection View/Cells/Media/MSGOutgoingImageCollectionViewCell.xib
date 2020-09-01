@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="269" height="176"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-Pv-V22">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-Pv-V22" customClass="FLAnimatedImageView">
                         <rect key="frame" x="-20" y="0.0" width="269" height="176"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="269" id="MBM-ua-CR4"/>
