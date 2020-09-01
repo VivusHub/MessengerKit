@@ -23,22 +23,16 @@
                             <constraint firstAttribute="width" constant="269" id="Gsv-eB-MmU"/>
                         </constraints>
                     </imageView>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pzh-Py-aXf">
-                        <rect key="frame" x="144.5" y="78" width="20" height="20"/>
-                    </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="Pzh-Py-aXf" firstAttribute="centerY" secondItem="lTb-3z-uN0" secondAttribute="centerY" id="0B3-eo-wJT"/>
                 <constraint firstItem="lTb-3z-uN0" firstAttribute="leading" secondItem="rWJ-Ue-VCr" secondAttribute="leading" constant="20" id="ATr-e8-e47"/>
                 <constraint firstAttribute="bottom" secondItem="lTb-3z-uN0" secondAttribute="bottom" id="CmA-xR-jvU"/>
-                <constraint firstItem="Pzh-Py-aXf" firstAttribute="centerX" secondItem="lTb-3z-uN0" secondAttribute="centerX" id="HS5-1a-wF6"/>
                 <constraint firstItem="lTb-3z-uN0" firstAttribute="top" secondItem="rWJ-Ue-VCr" secondAttribute="top" id="OVt-to-5Zg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="djn-0T-8gp"/>
             <size key="customSize" width="269" height="176"/>
             <connections>
-                <outlet property="activityIndic" destination="Pzh-Py-aXf" id="361-Md-CRy"/>
                 <outlet property="imageView" destination="lTb-3z-uN0" id="JHT-7a-Eop"/>
                 <outlet property="imageViewWidthConstraint" destination="Gsv-eB-MmU" id="039-Nd-AoQ"/>
             </connections>

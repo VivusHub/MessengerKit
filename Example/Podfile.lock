@@ -1,16 +1,31 @@
 PODS:
-  - MessengerKit (0.1.0)
+  - FLAnimatedImage (1.0.12)
+  - MessengerKit (1.0.5):
+    - SDWebImageFLPlugin
+  - SDWebImage/Core (5.8.1)
+  - SDWebImageFLPlugin (0.4.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.6)
 
 DEPENDENCIES:
   - MessengerKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FLAnimatedImage
+    - SDWebImage
+    - SDWebImageFLPlugin
 
 EXTERNAL SOURCES:
   MessengerKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MessengerKit: 892fdf259f354b32e0c92146a82e2c9432182ec9
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  MessengerKit: 0d53f4ab4de7c5ef5a3b25e52ed0f12f52dccbee
+  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+  SDWebImageFLPlugin: 6c2295fb1242d44467c6c87dc5db6b0a13228fd8
 
 PODFILE CHECKSUM: aaa0affedafb7fc2bd49bff77dbec8cb8ca43ebd
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.8.4

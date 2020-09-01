@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FLAnimatedImage
+import SDWebImageFLPlugin
 class MSGImageCollectionViewCell: MSGMessageCell {
     
     @IBOutlet weak var imageView: FLAnimatedImageView!
@@ -32,24 +32,23 @@ class MSGImageCollectionViewCell: MSGMessageCell {
         }
     }
     private func setGif(from url: URL) {
-        do {
-            DispatchQueue.global(qos: .background).async { [weak self] in
-                guard let strongSelf = self else {return }
-                strongSelf.getData(from: url) { data , response,error in
-                    if let _data = data {
-                        DispatchQueue.main.async {
-                           let gifImage = FLAnimatedImage(gifData: _data)
-                            strongSelf.imageView.animatedImage = gifImage
-                            strongSelf.activityIndic.stopAnimating()
-                        }
-                    }
-                }
-                
-            }
+      
+            self.imageView.sd_setImage(with: url, placeholderImage: UIImage(), options: .progressiveLoad)
+//            DispatchQueue.global(qos: .background).async { [weak self] in
+//                guard let strongSelf = self else {return }
+//                strongSelf.getData(from: url) { data , response,error in
+//                    if let _data = data {
+//                        DispatchQueue.main.async {
+//                           let gifImage = FLAnimatedImage(gifData: _data)
+//                            strongSelf.imageView.animatedImage = gifImage
+//                            strongSelf.activityIndic.stopAnimating()
+//                        }
+//                    }
+//                }
+//
+//            }
             
-        }catch{
-            print("MSGImageCollectionViewCell : ",error.localizedDescription)
-        }
+        
     }
     private func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
