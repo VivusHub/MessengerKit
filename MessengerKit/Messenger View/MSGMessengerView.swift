@@ -24,7 +24,13 @@ class MSGMessengerView: UIView {
         
         collectionViewContainer.addSubview(collectionView)
         
-        collectionView.topAnchor.constraint(equalTo: collectionViewContainer.topAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        } else {
+            // Fallback on earlier versions
+            collectionView.topAnchor.constraint(equalTo: collectionViewContainer.topAnchor, constant: 0).isActive = true
+        }
+
         collectionView.leadingAnchor.constraint(equalTo: collectionViewContainer.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: collectionViewContainer.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: collectionViewContainer.bottomAnchor).isActive = true
