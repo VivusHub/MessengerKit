@@ -21,6 +21,7 @@ public enum MSGMessageBody {
     case emoji(String)
     case image(UIImage)
     case imageFromUrl(URL)
+	case gifFromUrl(URL)
     case video(UIImage, String)
     case custom(Any)
 
@@ -38,6 +39,9 @@ public enum MSGMessageBody {
 		
 		case .imageFromUrl(let imageUrl):
 			return imageUrl
+		
+		case .gifFromUrl(let gifUrl):
+			return gifUrl
 		
 		case .video(_, let video):
 			return video

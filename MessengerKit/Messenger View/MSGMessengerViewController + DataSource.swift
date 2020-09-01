@@ -61,7 +61,7 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
             return cell
             
             
-        case .image, .imageFromUrl:
+        case .image, .imageFromUrl,.gifFromUrl:
             
             let identifier = message.user.isSender ? "outgoingImage" : "incomingImage"
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! MSGMessageCell

@@ -23,7 +23,9 @@ class MSGImageCollectionViewCell: MSGMessageCell {
             if case let MSGMessageBody.image(image) = message.body {
                 imageView.image = image
             } else if case let MSGMessageBody.imageFromUrl(imageUrl) = message.body {
-                self.downloadImage(from: imageUrl)
+                self.downloadImage(from: imageUrl,type:"image")
+            }else if case let MSGMessageBody.gifFromUrl(imageUrl) = message.body {
+                self.downloadImage(from: imageUrl,type:"gif")
             }
             
         }
@@ -33,14 +35,20 @@ class MSGImageCollectionViewCell: MSGMessageCell {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
-    private func downloadImage(from url: URL) {
+    private func downloadImage(from url: URL,type:String) {
         print("Download Started")
+        
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
             DispatchQueue.main.async() {
-                self.imageView.image = UIImage(data: data)
+                if type == "gif"{
+            self.imageView.image = UIImage.gif(data:data)
+                }else{
+            self.imageView.image = UIImage(data: data)
+                }
+                
             }
         }
     }

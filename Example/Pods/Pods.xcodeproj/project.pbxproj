@@ -74,6 +74,7 @@
 		F889B35F2DFB427D8EB200CA6F7BE431 /* MSGMessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22212893942E71B0F3F340786BDA03 /* MSGMessengerView.swift */; };
 		F8B53F43B72A5934D478C5B349E6779F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467620EF3914A436E960B7943FA2259B /* Assets.xcassets */; };
 		F9DDEED51F291BF3FAC58A0C7669B6C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FAE5902E24FE93EB00F865E9 /* UIImage+gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5902D24FE93EB00F865E9 /* UIImage+gif.swift */; };
 		FBDFA0FDF0A48D2E26BAB90A656D0B03 /* MSGImessageTravCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A1ADA5376D0AB0D7AB226825D9278 /* MSGImessageTravCollectionViewFlowLayout.swift */; };
 		FE9DFEEB7259A6EB0ACA20F205A9BFB2 /* MSGIncomingTailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C9C7A18D08306966DC174D90B4A0BB /* MSGIncomingTailCollectionViewCell.xib */; };
 		FED33E70541C72C3013F65A0400D80BD /* MSGImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260C03A5C83744B3400A98AB7A05D54 /* MSGImageCollectionViewCell.swift */; };
@@ -185,6 +186,7 @@
 		EBEB6F3B52A909B4DA9E71A3718A61E3 /* MSGOutgoingEmojiCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = MSGOutgoingEmojiCollectionViewCell.xib; sourceTree = "<group>"; };
 		EEA4B36B62B31A4B1A3E411B375963E1 /* Pods-MessengerKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MessengerKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F7FDA2687991FEE267D53CA142C7D0EF /* MSGMessengerViewController + CellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MSGMessengerViewController + CellDelegate.swift"; sourceTree = "<group>"; };
+		FAE5902D24FE93EB00F865E9 /* UIImage+gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+gif.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		1F191AA283D6297D35BF83A11017EFF3 /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
+				FAE5902C24FE93EB00F865E9 /* extension */,
 				5AB03D4AB95E193F2ECD380C74F9F5C2 /* MSGCollectionView.swift */,
 				01ABEBC7483727A64ADE019263A4D3A0 /* MSGDataSource.swift */,
 				142BBCFCC7D877C87D117F2CF9E66AF9 /* MSGDelegate.swift */,
@@ -705,6 +708,15 @@
 			path = iMessage;
 			sourceTree = "<group>";
 		};
+		FAE5902C24FE93EB00F865E9 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5902D24FE93EB00F865E9 /* UIImage+gif.swift */,
+			);
+			name = extension;
+			path = ../extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -795,6 +807,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -892,6 +905,7 @@
 				23ACF3C0970AA9F0F5FB5FC1C02A075A /* MSGMessengerStyle.swift in Sources */,
 				F889B35F2DFB427D8EB200CA6F7BE431 /* MSGMessengerView.swift in Sources */,
 				EAFB07FE09D5A2418E9EC19A3936B45D /* MSGMessengerViewController + CellDelegate.swift in Sources */,
+				FAE5902E24FE93EB00F865E9 /* UIImage+gif.swift in Sources */,
 				764E0718F50D225DE75FD0BDEE6B9A15 /* MSGMessengerViewController + DataSource.swift in Sources */,
 				7E834729482D50128A6057A194BD25BD /* MSGMessengerViewController + Helpers.swift in Sources */,
 				59F8FC1E8B3F63A212E9BE61BD9EEEE8 /* MSGMessengerViewController.swift in Sources */,
@@ -962,6 +976,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1100,6 +1115,7 @@
 				PRODUCT_NAME = MessengerKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -1201,6 +1217,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1219,6 +1236,7 @@
 				PRODUCT_NAME = MessengerKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
