@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
+import FLAnimatedImage
 class MSGImageCollectionViewCell: MSGMessageCell {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: FLAnimatedImageView!
     @IBOutlet weak var imageViewWidthConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var activityIndic : UIActivityIndicatorView!
     override public var message: MSGMessage? {
         didSet {
             
@@ -23,14 +23,35 @@ class MSGImageCollectionViewCell: MSGMessageCell {
             if case let MSGMessageBody.image(image) = message.body {
                 imageView.image = image
             } else if case let MSGMessageBody.imageFromUrl(imageUrl) = message.body {
-                self.downloadImage(from: imageUrl,type:"image")
+
+                self.setGif(from: imageUrl)
             }else if case let MSGMessageBody.gifFromUrl(imageUrl) = message.body {
-                self.downloadImage(from: imageUrl,type:"gif")
+                self.setGif(from: imageUrl)
             }
             
         }
     }
-    
+    private func setGif(from url: URL) {
+        do {
+            DispatchQueue.global(qos: .background).async { [weak self] in
+                guard let strongSelf = self else {return }
+                strongSelf.getData(from: url) { data , response,error in
+                    if let _data = data {
+                        DispatchQueue.main.async {
+                           let gifImage = FLAnimatedImage(gifData: _data)
+                            strongSelf.imageView.animatedImage = gifImage
+                                       strongSelf.urlGif = urlString
+                            strongSelf.activityIndic.stopAnimating()
+                        }
+                    }
+                }
+                
+            }
+            
+        }catch{
+            print("MSGImageCollectionViewCell : ",error.localizedDescription)
+        }
+    }
     private func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
@@ -58,7 +79,7 @@ class MSGImageCollectionViewCell: MSGMessageCell {
         
         imageView.layer.cornerRadius = 18
         imageView.layer.masksToBounds = true
-        imageView.isUserInteractionEnabled = true   
+        imageView.isUserInteractionEnabled = true  
     }
 
 }

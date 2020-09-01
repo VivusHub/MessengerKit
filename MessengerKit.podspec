@@ -34,12 +34,12 @@ The framework was built for and is used in production at [Travamigos](https://tr
   s.homepage         = 'https://github.com/steve228uk/MessengerKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'steve228uk' => 'steve228uk@gmail.com' }
-  s.source           = { :git => 'https://github.com/VivusHub/MessengerKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/atacand1920/MessengerKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/steve228uk'
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '4.2'
-
+  s.dependency 'FLAnimatedImage'
   s.source_files = ['MessengerKit/**/*.{h,m,swift}']
   s.resources = 'MessengerKit/**/*.{xcassets,xib,nib}'
 
