@@ -22,7 +22,7 @@ This an updated version of [MessengerKit](https://github.com/steve228uk/Messenge
 - [x] A custom theming system to bring your own `UICollectionViewCell`s, headers, footers, and input views.
 - [x] Avatar support (currently only in the `travamigos` theme).
 
-The framework is actively being used and maintained in one of apps, [Vivus](http://vivushub.com/?adFor=social&ref=github).
+The framework is actively being used and maintained in one of our apps, [Vivus](http://vivushub.com/?adFor=social&ref=github).
 
 ## Screenshots
 
