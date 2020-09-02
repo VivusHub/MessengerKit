@@ -1,3 +1,11 @@
+//
+//  UIImage+gif.swift
+//  Vivus Explore
+//
+//  Created by Seun Oboite on 02/09/2020.
+//  Copyright © 2020 Vivus Hub Ltd. All rights reserved.
+//
+
 import  UIKit
 extension UIImage {
 

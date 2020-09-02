@@ -1,9 +1,9 @@
 //
 //  MSGMessageBody.swift
-//  MessengerKit
+//  Vivus Explore
 //
-//  Created by Stephen Radford on 08/06/2018.
-//  Copyright © 2018 Cocoon Development Ltd. All rights reserved.
+//  Created by Seun Oboite on 02/09/2020.
+//  Copyright © 2017 Vivus Hub Ltd. All rights reserved.
 //
 
 import UIKit

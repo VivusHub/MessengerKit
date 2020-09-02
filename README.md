@@ -12,17 +12,17 @@
 
 ## About
 
-MessengerKit is a drop-in UI for messenger interfaces on iOS built in Swift. Centred around a single `UIViewController`, MessengerKit is themeable to fit your needs and includes a number of powerful features:
+This an updated version of [MessengerKit](https://github.com/steve228uk/MessengerKit), a drop-in UI for messenger interfaces on iOS built in Swift. Centred around a single `UIViewController`, MessengerKit is themeable to fit your needs and includes a number of powerful features:
 
-- `UICollectionView` based with pre-loading and caching of size calculation for bubbles.
-- Auto-growing input view.
-- Multiple included cell types: text, large-emoji, image, video.
-- Presentation of `SFSafariViewController`
-- Built-in, customisable themes.
-- A custom theming system to bring your own `UICollectionViewCell`s, headers, footers, and input views.
-- Avatar support (currently only in the `travamigos` theme).
+- [x] `UICollectionView` based with pre-loading and caching of size calculation for bubbles.
+- [x] Auto-growing input view.
+- [x] Multiple cell types: text, large-emoji, image, video, location and gifs.
+- [x] Presentation of `SFSafariViewController`
+- [x] Built-in, customisable themes.
+- [x] A custom theming system to bring your own `UICollectionViewCell`s, headers, footers, and input views.
+- [x] Avatar support (currently only in the `travamigos` theme).
 
-The framework was built for and is used in production at [Travamigos](https://travamigos.com).
+The framework is actively being used and maintained in one of apps, [Vivus](http://vivushub.com/?adFor=social&ref=github).
 
 ## Screenshots
 
@@ -38,7 +38,7 @@ The framework was built for and is used in production at [Travamigos](https://tr
 
 ## Installation
 
-MessengerKit requires Swift 4.2 and iOS 10.0 or later.
+MessengerKit requires Swift 4.2 and iOS 11.0 or later.
 
 ### Manual
 
@@ -49,11 +49,11 @@ Drag the contents of the `MessengerKit` folder into your Xcode Project.
 Add the following to your project's Podfile.
 
 ```ruby
-pod 'MessengerKit', :git => 'https://github.com/steve228uk/MessengerKit.git'
+pod 'MessengerKit', :git => 'https://github.com/VivusHub/MessengerKit.git'
 ```
 
 ## Credits
 
-MessengerKit was written by [@steve228uk](https://twitter.com/steve228uk) for [Travamigos](https://travamigos.com) and is available under the MIT license.
-
-It makes use of [KeyboardUtility](https://github.com/JunyuKuang/KeyboardUtility) by [@JunyuKuang](https://github.com/JunyuKuang).
+* Orginally written by [@steve228uk](https://twitter.com/steve228uk).
+* Upddated by [@VivusHub](https://twitter.com/vivushub).
+* It makes use of [KeyboardUtility](https://github.com/JunyuKuang/KeyboardUtility) by [@JunyuKuang](https://github.com/JunyuKuang).
