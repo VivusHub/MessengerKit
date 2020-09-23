@@ -55,5 +55,5 @@ pod 'MessengerKit', :git => 'https://github.com/VivusHub/MessengerKit.git'
 ## Credits
 
 * Orginally written by [@steve228uk](https://twitter.com/steve228uk).
-* Upddated by [@VivusHub](https://twitter.com/vivushub).
+* Updated by [@VivusHub](https://twitter.com/vivushub).
 * It makes use of [KeyboardUtility](https://github.com/JunyuKuang/KeyboardUtility) by [@JunyuKuang](https://github.com/JunyuKuang).
