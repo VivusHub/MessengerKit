@@ -57,3 +57,6 @@ pod 'MessengerKit', :git => 'https://github.com/VivusHub/MessengerKit.git'
 * Orginally written by [@steve228uk](https://twitter.com/steve228uk).
 * Updated by [@VivusHub](https://twitter.com/vivushub).
 * It makes use of [KeyboardUtility](https://github.com/JunyuKuang/KeyboardUtility) by [@JunyuKuang](https://github.com/JunyuKuang).
+
+## License
+The codes and all related text in this documentation fall under [Vivus Hub commercially available contents agreement](https://www.vivushub.com/vivus/interface/terms) and in some cases the MIT License when applicable. In the event of a conflict between our terms and the MIT License, Vivus Hub terms takes precedent.
