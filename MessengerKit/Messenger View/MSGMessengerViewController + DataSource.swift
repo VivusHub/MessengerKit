@@ -76,7 +76,7 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
             
         case .video:
             
-            let identifier = message.user.isSender ? "outgoingVideo" : "incomingVideo"
+            let identifier = message.user.isSender ? "outgoingImage" : "incomingImage"
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! MSGMessageCell
             
             cell.delegate = self
