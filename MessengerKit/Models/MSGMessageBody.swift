@@ -23,6 +23,7 @@ public enum MSGMessageBody {
     case imageFromUrl(URL)
     case locationFromUrl(URL)
 	case gifFromUrl(URL)
+	case videoFromUrl(URL)
     case video(UIImage, String)
     case custom(Any)
 
@@ -43,6 +44,9 @@ public enum MSGMessageBody {
             
         case .locationFromUrl(let locationUrl):
             return locationUrl
+
+        case .videoFromUrl(let videoUrl):
+            return videoUrl
 		
 		case .gifFromUrl(let gifUrl):
 			return gifUrl
