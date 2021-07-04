@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MessengerKit'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'A UI framework for building messenger interfaces on iOS'
 
 # This description is used to generate tags and improve search results.
@@ -18,24 +18,24 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-MessengerKit is a drop-in UI for messenger interfaces on iOS built in Swift. Centred around a single `UIViewController`, MessengerKit is themeable to fit your needs and includes a number of powerful features:
+This an updated version of MessengerKit, a drop-in UI for messenger interfaces on iOS built in Swift. Centred around a single UIViewController, MessengerKit is themeable to fit your needs and includes a number of powerful features:
 
-- `UICollectionView` based with pre-loading and caching of size calculation for bubbles.
-- Auto-growing input view.
-- Multiple included cell types: text, large-emoji, image, video.
-- Presentation of `SFSafariViewController`
-- Built-in, customisable themes.
-- A custom theming system to bring your own `UICollectionViewCell`s, headers, footers, and input views.
-- Avatar support (currently only in the `travamigos` theme).
+ - UICollectionView based with pre-loading and caching of size calculation for bubbles.
+ - Auto-growing input view.
+ - Multiple cell types: text, large-emoji, image, video, location and gifs.
+ - Presentation of SFSafariViewController
+ - Built-in, customisable themes.
+ - A custom theming system to bring your own UICollectionViewCells, headers, footers, and input views.
+ - Avatar support (currently only in the travamigos theme).
 
-The framework was built for and is used in production at [Travamigos](https://travamigos.com).
+The framework is actively being used and maintained in one of our apps, [Vivus](https://www.vivushub.com/vivus/?ref=github).
                        DESC
 
-  s.homepage         = 'https://github.com/steve228uk/MessengerKit'
+  s.homepage         = 'https://github.com/VivusHub/MessengerKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'steve228uk' => 'steve228uk@gmail.com' }
+  s.author           = { 'VivusHub' => 'dev@vivushub.com' }
   s.source           = { :git => 'https://github.com/VivusHub/MessengerKit.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/steve228uk'
+  s.social_media_url = 'https://twitter.com/VivusHub'
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '4.2'

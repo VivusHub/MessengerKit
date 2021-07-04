@@ -85,9 +85,9 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
             cell.isLastInSection = isLast
             
             return cell
-            
-        case .custom:
-            let identifier = message.user.isSender ? "outgoingCustom" : "incomingCustom"
+
+        case .locationFromUrl:
+            let identifier = message.user.isSender ? "outgoingImage" : "incomingImage"
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! MSGMessageCell
             
             cell.delegate = self
@@ -96,9 +96,9 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
             cell.isLastInSection = isLast
             
             return cell
-
-        case .locationeFromUrl(_):
-            let identifier = message.user.isSender ? "outgoingImage" : "incomingImage"
+            
+        case .custom:
+            let identifier = message.user.isSender ? "outgoingCustom" : "incomingCustom"
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! MSGMessageCell
             
             cell.delegate = self
