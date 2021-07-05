@@ -24,11 +24,17 @@ public class MSGMessage: NSObject{
     /// The time that the message was sent.
     public let sentAt: Date
     
-    public init(id: Int, body: MSGMessageBody, user: MSGUser, sentAt: Date) {
+    public let type: String
+    
+    public let url: URL?
+    
+    public init(id: Int, body: MSGMessageBody, user: MSGUser, sentAt: Date, type: String, url: URL? = nil) {
         self.id = id
         self.body = body
         self.user = user
         self.sentAt = sentAt
+        self.type = type
+        self.url = url
     }
     
 }

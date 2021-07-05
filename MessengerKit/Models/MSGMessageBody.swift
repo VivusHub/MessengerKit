@@ -21,9 +21,9 @@ public enum MSGMessageBody {
     case emoji(String)
     case image(UIImage)
     case imageFromUrl(URL)
-    case locationFromUrl(URL)
+    case locationFromUrl(UIImage)
 	case gifFromUrl(URL)
-	case videoFromUrl(URL)
+	case videoFromUrl(UIImage)
     case video(UIImage, String)
     case custom(Any)
 
