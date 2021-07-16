@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'MessengerKit'
+  s.name             = 'VHMessengerKit'
   s.version          = '1.0.6'
   s.summary          = 'A UI framework for building messenger interfaces on iOS'
 
